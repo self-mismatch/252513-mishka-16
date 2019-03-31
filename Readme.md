@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Владислав Роик](https://up.htmlacademy.ru/adaptive/16/user/252513).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Островский](https://up.htmlacademy.ru/adaptive/16/user/198062).
 
 ---
 
