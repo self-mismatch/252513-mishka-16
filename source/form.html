@@ -28,6 +28,62 @@
       </nav>
     </header>
 
+
+    <main class="page-main">
+      <h1 class="page-main__title">Вязание на заказ</h1>
+      <section class="order">
+        <h2 class="visually-hidden">Форма заказа</h2>
+        <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+        <form class="order__form" method="post">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Тип</legend>
+            <input class="form__checkbox" id="accessory" type="radio" name="type-radion" checked>
+            <label class="form__label" for="accessory">Аксессуар для интерьера</label>
+            <input class="form__checkbox" id="toy" type="radio" name="type-radion">
+            <label class="form__label" for="toy">Детская игрушка</label>
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Цвет</legend>
+            <input class="form__checkbox" id="color-white" type="checkbox" name="color-checkbox" checked>
+            <label class="form__label" for="color-white">Белый</label>
+            <input class="form__checkbox" id="color-gray" type="checkbox" name="color-checkbox" checked>
+            <label class="form__label" for="color-gray">Серый</label>
+            <input class="form__checkbox" id="color-tiffany" type="checkbox" name="color-checkbox">
+            <label class="form__label" for="color-tiffany">"Тиффани"</label>
+            <input class="form__checkbox" id="color-black" type="checkbox" name="color-checkbox">
+            <label class="form__label" for="color-black">Черный</label>
+            <input class="form__checkbox" id="color-pink" type="checkbox" name="color-checkbox">
+            <label class="form__label" for="color-pink">Розовый</label>
+            <input class="form__checkbox" id="color-orange" type="checkbox" name="color-checkbox">
+            <label class="form__label" for="color-orange">Оранжевый</label>
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Фио</legend>
+            <label class="form__label" for="first-name">Имя:</label>
+            <input class="form__input" id="first-name" type="text" name="first-name" placeholder="Введите ваше имя*" required>
+            <label class="form__label" for="second-name">Фамилия:</label>
+            <input class="form__input" id="second-name" type="text" name="second-name" placeholder="Введите ваше имя*" required>
+            <label class="form__label" for="patronymic">Отчество:</label>
+            <input class="form__input" id="patronymic" type="text" name="patronymic" placeholder="Введите ваше имя*">
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Тел</legend>
+            <input class="form__input" id="phone" type="tel" name="phone" placeholder="+7 xxx xxx xx xx*" required>
+            <label class="visually-hidden" for="phone">Ввод номера телефона</label>
+            <input class="form__input" id="email" type="email" name="email" placeholder="Ваш Email*" required>
+            <label class="visually-hidden" for="email">Ввод Email</label>
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Доп</legend>
+            <textarea class="form__textarea" placeholder="Опишите все ваши пожалания к заказу">
+            </textarea>
+          </fieldset>
+          <p class="form__description">*Поля обязательны для заполнения</p>
+          <input class="button form__submit" type="submit" name="submit" value="Отправить заказ">
+        </form>
+      </section>
+    </main>
+
     <footer class="page-footer">
       <ul class="social">
         <li class="social__item">
