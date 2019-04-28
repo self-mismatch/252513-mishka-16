@@ -1,4 +1,21 @@
+.top-product {
+  padding: 25px 0;
+
+  background-color: #ffffff;
+}
+
+.top-product__wrapper {
+  .wrapper();
+}
+
+.top-product__title {
+  margin-bottom: 5px;
+}
+
 .top-product__subtitle {
+  margin: 0;
+  margin-bottom: 20px;
+
   font-size: 17px;
   line-height: 20px;
   font-weight: 700;
@@ -7,15 +24,147 @@
 }
 
 .top-product__description {
+  margin: 0;
+  margin-bottom: 20px;
+
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;
   color: #444444;
 }
 
+.top-product__table {
+  margin-bottom: 25px;
+}
+
+.top-product__image {
+  margin-bottom: 20px;
+
+  &--tablet {
+    display: none;
+  }
+
+  &--desktop {
+    display: none;
+  }
+}
+
 .top-product__price {
+  margin: 0;
+  margin-bottom: 25px;
+
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
+  text-align: center;
   color: #444444;
+}
+
+
+@media (min-width: 768px) {
+  .top-product__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .top-product__column {
+    width: 334px;
+  }
+
+  .top-product__titles {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .top-product__title {
+    margin-bottom: 0;
+  }
+
+  .top-product__subtitle {
+    width: 90px;
+    margin-bottom: 0;
+
+    text-align: center;
+  }
+
+  .top-product__description {
+    width: 260px;
+  }
+
+  .top-product__table {
+    width: 290px;
+  }
+
+  .top-product__image {
+    margin-bottom: 0;
+
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
+
+  .top-product__price {
+    width: 290px;
+  }
+
+  .top-product__buy {
+    width: 290px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .top-product__column {
+    width: 525px;
+
+    &--first {
+      width: 350px;
+      margin-left: 175px;
+    }
+
+    &--second {
+      margin-top: -100px;
+    }
+  }
+
+  .top-product__titles {
+    justify-content: flex-start;
+  }
+
+  .top-product__title {
+    z-index: 10;
+
+    order: 2;
+  }
+
+  .top-product__subtitle {
+    margin: 0 40px;
+  }
+
+  .top-product__description {
+    width: 300px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .top-product__price {
+    font-size: 20px;
+  }
+
+  .top-product__image {
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
+  }
 }
