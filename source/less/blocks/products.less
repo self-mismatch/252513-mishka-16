@@ -1,8 +1,24 @@
 .products__list {
+  margin: 0;
+  padding: 0;
+
   list-style-type: none;
 }
 
+.products__item {
+  display: flex;
+}
+
+.products__text {
+  margin: 0;
+  padding-right: 30px;
+}
+
 .products__link {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+
   font-size: 19px;
   line-height: 24px;
   font-weight: 700;
@@ -13,5 +29,32 @@
 
   &--darkgreen {
     background-color: #56c3b2;
+  }
+}
+
+.products__svg {
+  opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+  .products__list {
+    .wrapper();
+
+    display: flex;
+  }
+
+  .products__link {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .products__item {
+    width: 100%;
+  }
+
+  .products__link {
+    width: 100%;
   }
 }

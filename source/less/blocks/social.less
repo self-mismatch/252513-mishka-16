@@ -1,7 +1,32 @@
 .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 20px;
+
   list-style-type: none;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.social__item {
+  margin-right: 35px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .social__link {
   text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .social {
+    padding-bottom: 0;
+
+    border-bottom: none;
+  }
 }
