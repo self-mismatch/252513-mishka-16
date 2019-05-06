@@ -4,7 +4,7 @@
   align-items: center;
   margin: 0;
   padding: 0;
-  padding-bottom: 20px;
+  padding-bottom: 21px;
 
   list-style-type: none;
 
@@ -12,7 +12,7 @@
 }
 
 .social__item {
-  margin-right: 35px;
+  margin-right: 41px;
 
   &:last-child {
     margin-right: 0;
@@ -21,10 +21,21 @@
 
 .social__link {
   text-decoration: none;
+  color: #231f20;
+
+  &:hover {
+    color: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .social {
+    align-items: center;
+    padding-top: 13px;
     padding-bottom: 0;
 
     border-bottom: none;

@@ -9,16 +9,38 @@
 
 .page-footer__logo {
   display: none;
+
+  color: #000000;
+
+  &:hover {
+    color: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-@media (min-width: 768px) {
+@media (max-width: @mobile-width-only) {
+  .page-footer {
+    width: 320px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    padding: 44px 0 51px 0;
+  }
+
   .page-footer__wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
   }
 
   .page-footer__logo {
     display: block;
+    margin-right: 77px;
   }
 }

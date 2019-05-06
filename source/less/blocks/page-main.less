@@ -3,11 +3,11 @@
   margin: 0 auto;
 
   &--index {
-    background: url("../../img/hero-mobile@1x.jpg") no-repeat 50% 0 #f9f9f9;
+    background: url("../../img/hero-mobile@1x.jpg") no-repeat 50% -0.5%;
   }
 
   &--catalog {
-    padding-bottom: 60px;
+    padding-bottom: 26px;
   }
 }
 
@@ -17,7 +17,7 @@
 
 .page-main__title {
   margin: 0;
-  padding: 70px 0 75px 0;
+  padding: 70px 0 122px 0;
 
   font-size: 27px;
   line-height: 30px;
@@ -26,6 +26,8 @@
   color: #000000;
 
   &--catalog {
+    padding-bottom: 76px;
+
     background-color: #f1f1f1;
   }
 }
@@ -40,13 +42,13 @@
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .page-main {
     width: 768px;
-    padding-top: 150px;
+    padding-top: 95px;
 
     &--index {
-      background: url("../../img/hero-tablet@1x.jpg") no-repeat 50% 0;
+      background: url("../../img/hero-tablet@1x.jpg") no-repeat 50% -2.2%;
     }
 
     &--catalog {
@@ -55,7 +57,8 @@
   }
 
   .page-main__title {
-    padding-bottom: 375px;
+    padding-top: 0;
+    padding-bottom: 373px;
 
     font-size: 43px;
     line-height: 50px;
@@ -72,16 +75,18 @@
 }
 
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop-width) {
   .page-main {
     width: 1150px;
 
     &--index {
-      background: url("../../img/hero-desktop@1x.jpg") no-repeat 50% 0;
+      background: url("../../img/hero-desktop@1x.jpg") no-repeat 50% -2.3%;
     }
   }
 
   .page-main__title {
+    padding: 0 150px 354px 150px;
+
     font-size: 53px;
     line-height: 57px;
   }
