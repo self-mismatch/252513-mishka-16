@@ -1,11 +1,178 @@
 .site-list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
   list-style-type: none;
 }
 
+.site-list__item {
+  border-top: 1px solid #ececec;
+
+  &--search .site-list__link {
+    padding-left: 33px;
+
+    svg {
+      margin-right: 24px;
+    }
+  }
+
+  &--cart .site-list__link {
+    padding-left: 31px;
+
+    svg {
+      margin-right: 23px;
+    }
+  }
+
+  &--new {
+    display: none;
+  }
+
+  &--sale {
+    display: none;
+  }
+}
+
 .site-list__link {
+  display: flex;
+  align-items: center;
+  padding: 27px 30px 27px 75px;
+
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
   text-decoration: none;
   color: #000000;
+
+  svg {
+    color: #d3d2d2;
+  }
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+
+    svg {
+      color: #63d1bb;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    margin-left: 50px;
+  }
+
+  .site-list__link {
+    padding: 17px 0 17px 0;
+
+    font-size: 15px;
+  }
+
+  .site-list__item {
+    margin-right: 35px;
+
+    border: none;
+
+    &--search {
+      position: absolute;
+      top: 0;
+      right: 315px;
+
+      margin-right: 0;
+
+      border-left: 1px solid #ececec;
+
+      .site-list__link {
+        padding: 31px 32px 33px 32px;
+
+        font-size: 0;
+
+        svg {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &--cart {
+      position: absolute;
+      top: 0;
+      right: 50px;
+
+      margin-right: 0;
+
+      border-left: 1px solid #ececec;
+
+      .site-list__link {
+        padding: 31px 0 33px 31px;
+
+        font-size: 17px;
+
+        svg {
+          margin-right: 31px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list__item {
+    margin-right: 62px;
+
+    &--new {
+      display: block;
+    }
+
+    &--sale {
+      display: block;
+    }
+
+    &--search {
+      margin: 0;
+    }
+
+    &--cart {
+      margin: 0;
+    }
+
+    &--catalog {
+      position: absolute;
+      top: 0;
+      left: 50px;
+
+      margin: 0;
+
+      .site-list__link {
+        margin: 0;
+        padding: 31px 36px 33px 0;
+
+        font-size: 17px;
+
+        border-right: 1px solid #ececec;
+      }
+    }
+
+    &--knitting {
+      position: absolute;
+      top: 0;
+      left: 270px;
+
+      margin: 0;
+
+      .site-list__link {
+        margin: 0;
+        padding: 31px 36px 33px 0;
+
+        font-size: 17px;
+      }
+    }
+  }
 }

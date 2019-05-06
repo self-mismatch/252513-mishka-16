@@ -2,34 +2,52 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 30px;
-
-  border: 1px solid #ececec;
+  padding-bottom: 32px;
 }
 
 .production__title {
+  position: relative;
+
   margin: 0;
-  padding: 20px 30px;
+  padding: 24px 30px 24px 89px;
 
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
   color: #000000;
+
+  border: 1px solid #ececec;
+  border-bottom: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 33px;
+
+    width: 32px;
+    height: 32px;
+
+    background: url("../../img/icon-video.svg") no-repeat 0 0;
+  }
 }
 
 .production__video {
-  &--tablet {
-    display: none;
-  }
+  width: 260px;
 
-  &--desktop {
-    display: none;
-  }
+  vertical-align: bottom;
+}
+
+.production__block {
+  padding: 27px 33px 32px 33px;
+
+  border: 1px solid #ececec;
+  border-top: none;
 }
 
 .production__text {
   margin: 0;
-  padding: 20px 30px;
+  margin-bottom: 25px;
 
   font-size: 13px;
   line-height: 24px;
@@ -39,6 +57,7 @@
 
 .production__button {
   min-width: 192px;
+  padding-top: 17px;
 
   font-size: 17px;
   line-height: 16px;
@@ -46,22 +65,12 @@
   color: #444444;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .production__wrapper {
     align-items: flex-start;
     padding: 30px 40px;
 
     margin-top: -6px;
-  }
-
-  .production__video {
-    &--mobile {
-      display: none;
-    }
-
-    &--tablet {
-      display: block;
-    }
   }
 
   .production__title {
@@ -79,13 +88,17 @@
     line-height: 30px;
   }
 
+  .production__video {
+    width: 668px;
+  }
+
   .production__button {
     align-self: stretch;
   }
 }
 
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop-width) {
   .production {
     display: flex;
     flex-wrap: wrap;
@@ -97,17 +110,11 @@
     padding: 70px;
   }
 
-  .production__video {
-    &--tablet {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-    }
-  }
-
   .production__text {
     margin-bottom: 50px;
+  }
+
+  .production__video {
+    width: 682px;
   }
 }
