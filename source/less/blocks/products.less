@@ -82,22 +82,23 @@
 
 @media (min-width: @desktop-width) {
   .products__list {
-    align-items: flex-end;
     min-height: 124px;
   }
 
   .products__item {
+    align-items: flex-end;
     width: 100%;
-
-    &:hover {
-      align-self: stretch;
-    }
   }
 
   .products__link {
     width: 100%;
     min-height: 119px;
     padding-bottom: 26px;
+
+    &:hover,
+    &:focus {
+      align-self: stretch;
+    }
   }
 
   .products__text {
