@@ -30,15 +30,65 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 30px;
     left: 0;
   }
 
   &--flower::before {
+    top: 29px;
+    left: 8px;
+
     width: 32px;
     height: 37px;
 
     background: url("../../img/icon-feature-flower.svg") no-repeat 0 0;
+  }
+
+  &--money::before {
+    width: 47px;
+    height: 27px;
+
+    background: url("../../img/icon-feature-money.svg") no-repeat 0 0;
+  }
+
+  &--heart::before {
+    top: 35px;
+    left: 8px;
+
+    width: 34px;
+    height: 27px;
+
+    background: url("../../img/icon-feature-heart.svg") no-repeat 0 0;
+  }
+
+  &--ball::before {
+    top: 32px;
+    left: 3px;
+
+    width: 35px;
+    height: 34px;
+
+    background: url("../../img/icon-feature-ball.svg") no-repeat 0 0;
+  }
+
+  &--rocket::before {
+    top: 33px;
+    left: -6px;
+
+    width: 55px;
+    height: 23px;
+
+    background: url("../../img/icon-feature-rocket.svg") no-repeat 0 0;
+  }
+
+  &--gift::before {
+    top: 31px;
+    left: 4px;
+
+    width: 33px;
+    height: 32px;
+
+    background: url("../../img/icon-feature-gift.svg") no-repeat 0 0;
   }
 }
 
@@ -56,6 +106,7 @@
 
   .about-us__title {
     margin-bottom: 53px;
+    margin-left: -4px;
   }
 
   .about-us__list {
@@ -91,6 +142,26 @@
 
     &--gift {
       order: 6;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &--flower::before {
+      top: -4px;
+    }
+
+    &--money::before {
+      top: -3px;
+    }
+
+    &--heart::before {
+      top: 2px;
+    }
+
+    &--gift::before {
+      top: -2px;
     }
   }
 }

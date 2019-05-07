@@ -42,7 +42,7 @@ img {
   height: auto;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -51,9 +51,6 @@ img {
   border: 0;
   padding: 0;
 
-  white-space: nowrap;
-
-  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -61,4 +58,15 @@ img {
 .email-link {
   padding-bottom: 3px;
   border-bottom: 1px solid #62d1ba;
+
+  &:hover,
+  &:focus {
+    color: #46c1ae;
+
+    border-color: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

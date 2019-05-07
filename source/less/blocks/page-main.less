@@ -9,6 +9,10 @@
   &--catalog {
     padding-bottom: 26px;
   }
+
+  &--form {
+    padding-bottom: 55px;
+  }
 }
 
 .page-main__wrapper {
@@ -26,6 +30,12 @@
   color: #000000;
 
   &--catalog {
+    padding-bottom: 76px;
+
+    background-color: #f1f1f1;
+  }
+
+  &--form {
     padding-bottom: 76px;
 
     background-color: #f1f1f1;
@@ -53,6 +63,7 @@
 
     &--catalog {
       padding-top: 0;
+      padding-bottom: 31px;
     }
   }
 
@@ -64,7 +75,23 @@
     line-height: 50px;
 
     &--catalog {
-      padding-bottom: 100px;
+      position: relative;
+
+      padding-top: 37px;
+      padding-bottom: 90px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+
+        width: 100%;
+        min-height: 24px;
+
+        background: url("../../img/bg-zigzag-fill.svg") repeat-x 0 0;
+        background-size: contain;
+      }
     }
   }
 
@@ -82,6 +109,10 @@
     &--index {
       background: url("../../img/hero-desktop@1x.jpg") no-repeat 50% -2.3%;
     }
+
+    &--catalog {
+      padding-bottom: 105px;
+    }
   }
 
   .page-main__title {
@@ -89,6 +120,15 @@
 
     font-size: 53px;
     line-height: 57px;
+
+    &--catalog {
+      padding-top: 35px;
+      padding-bottom: 119px;
+
+      &::after {
+        min-height: 34px;
+      }
+    }
   }
 
   .page-main__subtitle {
