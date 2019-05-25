@@ -33,7 +33,7 @@ gulp.task("css", function () {
 
 gulp.task("refresh", function (done) {
   server.reload();
-  done();  
+  done();
 });
 
 gulp.task("server", function () {
