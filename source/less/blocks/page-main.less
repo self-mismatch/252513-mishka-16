@@ -3,7 +3,12 @@
   margin: 0 auto;
 
   &--index {
-    background: url("../../img/hero-mobile@1x.jpg") no-repeat 50% -0.5%;
+    background: url("../img/hero-mobile@1x.jpg") no-repeat 50% -0.5% #f9f9f9;
+    background-size: 575px auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/hero-mobile@2x.jpg");
+    }
   }
 
   &--catalog {
@@ -58,12 +63,22 @@
     padding-top: 95px;
 
     &--index {
-      background: url("../../img/hero-tablet@1x.jpg") no-repeat 50% -2.2%;
+      background: url("../img/hero-tablet@1x.jpg") no-repeat 50% -2.2% #f9f9f9;
+      background-size: 1150px auto;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/hero-tablet@2x.jpg");
+      }
     }
 
     &--catalog {
       padding-top: 0;
       padding-bottom: 31px;
+    }
+
+    &--form {
+      padding-top: 0;
+      padding-bottom: 50px;
     }
   }
 
@@ -89,7 +104,27 @@
         width: 100%;
         min-height: 24px;
 
-        background: url("../../img/bg-zigzag-fill.svg") repeat-x 0 0;
+        background: url("../img/bg-zigzag-fill.svg") repeat-x 0 0;
+        background-size: contain;
+      }
+    }
+
+    &--form {
+      position: relative;
+
+      padding-top: 36px;
+      padding-bottom: 91px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+
+        width: 100%;
+        min-height: 24px;
+
+        background: url("../img/bg-zigzag-fill.svg") repeat-x 0 0;
         background-size: contain;
       }
     }
@@ -107,7 +142,12 @@
     width: 1150px;
 
     &--index {
-      background: url("../../img/hero-desktop@1x.jpg") no-repeat 50% -2.3%;
+      background: url("../img/hero-desktop@1x.jpg") no-repeat 50% -2.3% #f9f9f9;
+      background-size: 1150px auto;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/hero-desktop@2x.jpg");
+      }
     }
 
     &--catalog {
@@ -116,7 +156,8 @@
   }
 
   .page-main__title {
-    padding: 0 150px 354px 150px;
+    min-height: 468px;
+    padding: 0 150px;
 
     font-size: 53px;
     line-height: 57px;
@@ -124,6 +165,15 @@
     &--catalog {
       padding-top: 35px;
       padding-bottom: 119px;
+
+      &::after {
+        min-height: 34px;
+      }
+    }
+
+    &--form {
+      padding-top: 35px;
+      padding-bottom: 120px;
 
       &::after {
         min-height: 34px;
