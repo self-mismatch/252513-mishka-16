@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/opensans.woff2">
+    <link rel="preload" href="fonts/opensans.woff">
+    <link rel="preload" href="fonts/opensansbold.woff2">
+    <link rel="preload" href="fonts/opensansbold.woff">
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
   <body>
@@ -31,13 +35,13 @@
           </li>
           <li class="site-list__item site-list__item--search main-nav__list-item">
             <a class="site-list__link" href="#">
-              <svg width="18" height="18"><use xlink:href="img/sprite.svg#icon-search"></use></svg>
+              <svg width="18" height="18"><use xlink:href="#icon-search"></use></svg>
               Поиск по сайту
             </a>
           </li>
           <li class="site-list__item site-list__item--cart main-nav__list-item">
             <a class="site-list__link" href="#">
-              <svg width="21" height="18"><use xlink:href="img/sprite.svg#icon-cart"></use></svg>
+              <svg width="21" height="18"><use xlink:href="#icon-cart"></use></svg>
               Корзина: пока пуста
             </a>
           </li>
@@ -60,74 +64,84 @@
           <p class="order__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
           <form class="form order__form" method="post">
             <div class="form__block">
-              <h2 class="form__block-title">Тип</h2>
-              <div class="form__input-block">
-                <input class="form__input form__input--radio visually-hidden" id="accessory" type="radio" value="accessory" name="type-radion" checked="">
-                <label class="form__label form__label--type" for="accessory">Аксессуар для интерьера</label>
-                <input class="form__input form__input--radio visually-hidden" id="toy" type="radio" value="toy" name="type-radion">
-                <label class="form__label form__label--type" for="toy">Детская игрушка</label>
+              <div class="form__block-wrapper">
+                <h2 class="form__block-title">Тип</h2>
+                <div class="form__input-block">
+                  <input class="form__input form__input--radio visually-hidden" id="accessory" type="radio" value="accessory" name="type-radion" checked="">
+                  <label class="form__label form__label--type" for="accessory">Аксессуар для интерьера</label>
+                  <input class="form__input form__input--radio visually-hidden" id="toy" type="radio" value="toy" name="type-radion">
+                  <label class="form__label form__label--type" for="toy">Детская игрушка</label>
+                </div>
               </div>
             </div>
             <div class="form__block form__block--color">
-              <h2 class="form__block-title">Цвет</h2>
-              <div class="form__input-block">
-                <input class="form__input form__input--checkbox visually-hidden" id="color-white" type="checkbox" value="white" name="color-checkbox" checked="">
-                <label class="form__label form__label--color" for="color-white">Белый</label>
-                <input class="form__input form__input--checkbox visually-hidden" id="color-gray" type="checkbox" value="gray" name="color-checkbox" checked="">
-                <label class="form__label form__label--color" for="color-gray">Серый</label>
-                <input class="form__input form__input--checkbox visually-hidden" id="color-tiffany" type="checkbox" value="tiffany" name="color-checkbox">
-                <label class="form__label form__label--color" for="color-tiffany">«Тиффани»</label>
-                <input class="form__input form__input--checkbox visually-hidden" id="color-black" type="checkbox" value="black" name="color-checkbox">
-                <label class="form__label form__label--color" for="color-black">Черный</label>
-                <input class="form__input form__input--checkbox visually-hidden" id="color-pink" type="checkbox" value="pink" name="color-checkbox">
-                <label class="form__label form__label--color" for="color-pink">Розовый</label>
-                <input class="form__input form__input--checkbox visually-hidden" id="color-orange" type="checkbox" value="orange" name="color-checkbox">
-                <label class="form__label form__label--color" for="color-orange">Оранжевый</label>
+              <div class="form__block-wrapper">
+                <h2 class="form__block-title">Цвет</h2>
+                <div class="form__input-block">
+                  <input class="form__input form__input--checkbox visually-hidden" id="color-white" type="checkbox" value="white" name="color-checkbox" checked="">
+                  <label class="form__label form__label--color" for="color-white">Белый</label>
+                  <input class="form__input form__input--checkbox visually-hidden" id="color-gray" type="checkbox" value="gray" name="color-checkbox" checked="">
+                  <label class="form__label form__label--color" for="color-gray">Серый</label>
+                  <input class="form__input form__input--checkbox visually-hidden" id="color-tiffany" type="checkbox" value="tiffany" name="color-checkbox">
+                  <label class="form__label form__label--color" for="color-tiffany">«Тиффани»</label>
+                  <input class="form__input form__input--checkbox visually-hidden" id="color-black" type="checkbox" value="black" name="color-checkbox">
+                  <label class="form__label form__label--color" for="color-black">Черный</label>
+                  <input class="form__input form__input--checkbox visually-hidden" id="color-pink" type="checkbox" value="pink" name="color-checkbox">
+                  <label class="form__label form__label--color" for="color-pink">Розовый</label>
+                  <input class="form__input form__input--checkbox visually-hidden" id="color-orange" type="checkbox" value="orange" name="color-checkbox">
+                  <label class="form__label form__label--color" for="color-orange">Оранжевый</label>
+                </div>
               </div>
             </div>
 
             <div class="form__block form__block--full-name">
-              <h2 class="form__block-title form__block-title--name">Фио</h2>
-              <div class="form__input-block">
-                <div class="form__text-block">
-                  <label class="form__label form__label--name" for="first-name">Имя:</label>
-                  <input class="form__input form__input--text" id="first-name" type="text" name="first-name" placeholder="Введите ваше имя*" required="">
-                </div>
-                <div class="form__text-block">
-                  <label class="form__label form__label--name" for="second-name">Фамилия:</label>
-                  <input class="form__input form__input--text" id="second-name" type="text" name="second-name" placeholder="Укажите фамилию*" required="">
-                </div>
-                <div class="form__text-block">
-                  <label class="form__label form__label--name" for="patronymic">Отчество:</label>
-                  <input class="form__input form__input--text" id="patronymic" type="text" name="patronymic" placeholder="Отчество, если желаете">
+              <div class="form__block-wrapper">
+                <h2 class="form__block-title form__block-title--name">Фио</h2>
+                <div class="form__input-block">
+                  <div class="form__text-block">
+                    <label class="form__label form__label--name" for="first-name">Имя:</label>
+                    <input class="form__input form__input--text" id="first-name" type="text" name="first-name" placeholder="Введите ваше имя*" required="">
+                  </div>
+                  <div class="form__text-block">
+                    <label class="form__label form__label--name" for="second-name">Фамилия:</label>
+                    <input class="form__input form__input--text" id="second-name" type="text" name="second-name" placeholder="Укажите фамилию*" required="">
+                  </div>
+                  <div class="form__text-block">
+                    <label class="form__label form__label--name" for="patronymic">Отчество:</label>
+                    <input class="form__input form__input--text" id="patronymic" type="text" name="patronymic" placeholder="Отчество, если желаете">
+                  </div>
                 </div>
               </div>
             </div>
 
             <div class="form__block">
-              <h2 class="form__block-title form__block-title--phone">Тел</h2>
-              <div class="form__input-block form__input-block--phone">
-                <div class="form__text-block">
-                  <input class="form__input form__input--text form__input--phone" id="phone" type="tel" name="phone" placeholder="+7 XXX XXX XX XX*" required="">
-                  <label class="visually-hidden" for="phone">Ввод номера телефона</label>
-                  <svg class="form__icon form__icon--phone" width="25" height="24"><use xlink:href="img/sprite.svg#icon-phone"></use></svg>
+              <div class="form__block-wrapper">
+                <h2 class="form__block-title form__block-title--phone">Тел</h2>
+                <div class="form__input-block form__input-block--phone">
+                  <div class="form__text-block">
+                    <input class="form__input form__input--text form__input--phone" id="phone" type="tel" name="phone" placeholder="+7 XXX XXX XX XX*" required="">
+                    <label class="visually-hidden" for="phone">Ввод номера телефона</label>
+                    <svg class="form__icon form__icon--phone" width="25" height="24"><use xlink:href="#icon-phone"></use></svg>
+                  </div>
                 </div>
-              </div>
-              <h2 class="form__block-title form__block-title--email">E-Mail</h2>
-              <div class="form__input-block">
-                <div class="form__text-block">
-                  <input class="form__input form__input--text form__input--email" id="email" type="email" name="email" placeholder="Ваш Email*" required="">
-                  <label class="visually-hidden" for="email">Ввод Email</label>
-                  <svg class="form__icon form__icon--email" width="32" height="21"><use xlink:href="img/sprite.svg#icon-email"></use></svg>
+                <h2 class="form__block-title form__block-title--email">E-Mail</h2>
+                <div class="form__input-block">
+                  <div class="form__text-block">
+                    <input class="form__input form__input--text form__input--email" id="email" type="email" name="email" placeholder="Ваш Email*" required="">
+                    <label class="visually-hidden" for="email">Ввод Email</label>
+                    <svg class="form__icon form__icon--email" width="32" height="21"><use xlink:href="#icon-email"></use></svg>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div class="form__block form__block--additional">
-              <h2 class="form__block-title">Доп</h2>
+              <div class="form__block-wrapper">
+                <h2 class="form__block-title">Доп</h2>
                 <div class="form__input-block">
                   <textarea class="form__input form__input--text form__input--wishes" id="wishes" placeholder="Опишите все ваши пожелания к заказу"></textarea>
                   <label class="visually-hidden" for="wishes">Пожелания к заказу</label>
+                </div>
               </div>
             </div>
             <div class="form__send-block">
@@ -141,36 +155,37 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <svg class="page-footer__logo" width="102" height="34"><use xlink:href="img/sprite.svg#footer-logo"></use></svg>
+        <a class="page-footer__link" href="index.html"><svg class="page-footer__logo" width="102" height="34"><use xlink:href="#footer-logo"></use></svg></a>
         <ul class="social">
           <li class="social__item">
             <a class="social__link social__link-instagram" href="#">
               <span class="visually-hidden">Мы в Инстаграме</span>
-              <svg width="21" height="21"><use xlink:href="img/sprite.svg#icon-instagram"></use></svg>
+              <svg width="21" height="21"><use xlink:href="#icon-instagram"></use></svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link-facebook" href="#">
               <span class="visually-hidden">Мы в Фейсбуке</span>
-              <svg width="15" height="28"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
+              <svg width="15" height="28"><use xlink:href="#icon-facebook"></use></svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link-twitter" href="#">
               <span class="visually-hidden">Мы в Твиттере</span>
-              <svg width="23" height="20"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
+              <svg width="23" height="20"><use xlink:href="#icon-twitter"></use></svg>
             </a>
           </li>
         </ul>
         <div class="copyright page-footer__copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <p class="copyright__text">Разработано</p>
-            <svg class="copyright__icon" width="27" height="34"><use xlink:href="img/sprite.svg#academy-logo"></use></svg>
+            <svg class="copyright__icon" width="27" height="34"><use xlink:href="#academy-logo"></use></svg>
           </a>
         </div>
       </div>
     </footer>
 
+    <script src="js/picturefill.js"></script>
     <script>
       var navMain = document.querySelector('.main-nav');
       var navToggle = document.querySelector('.main-nav__toggle');
@@ -187,6 +202,5 @@
         }
       });
     </script>
-    <script src="js/picturefill.js"></script>
   </body>
 </html>

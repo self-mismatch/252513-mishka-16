@@ -6,14 +6,6 @@
   padding: 26px 28px 27px 28px;
 
   border: 1px solid #ececec;
-
-  &:hover {
-    box-shadow: 0 5px 10px #ececec;
-  }
-
-  &:active {
-    box-shadow: 0 1px 5px #ececec;
-  }
 }
 
 .catalog__list {
@@ -28,6 +20,18 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &:hover {
+    .catalog__wrapper {
+      box-shadow: 0 5px 10px #ececec;
+    }
+  }
+
+  &:active {
+    .catalog__wrapper {
+      box-shadow: 0 1px 5px #ececec;
+    }
   }
 }
 

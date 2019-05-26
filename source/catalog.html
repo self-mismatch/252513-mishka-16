@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/opensans.woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
   <body>
@@ -31,13 +33,13 @@
           </li>
           <li class="site-list__item site-list__item--search main-nav__list-item">
             <a class="site-list__link" href="#">
-              <svg width="18" height="18"><use xlink:href="img/sprite.svg#icon-search"></use></svg>
+              <svg width="18" height="18"><use xlink:href="#icon-search"></use></svg>
               Поиск по сайту
             </a>
           </li>
           <li class="site-list__item site-list__item--cart main-nav__list-item">
             <a class="site-list__link" href="#">
-              <svg width="21" height="18"><use xlink:href="img/sprite.svg#icon-cart"></use></svg>
+              <svg width="21" height="18"><use xlink:href="#icon-cart"></use></svg>
               Корзина: пока пуста
             </a>
           </li>
@@ -59,7 +61,7 @@
           <h2 class="visually-hidden">Каталог товаров</h2>
           <ul class="catalog__list">
             <li class="catalog__item">
-              <a href="#">
+              <a href="hare.html">
                 <picture>
                   <source media="(min-width: 1150px)" type="image/webp" srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">
                   <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
@@ -72,21 +74,21 @@
               <div class="catalog__wrapper">
                 <div class="catalog__block">
                   <p class="catalog__name">
-                    <a class="catalog__link" href="#">Зайчик-попрыгайчик</a>
+                    <a class="catalog__link" href="hare.html">Зайчик-попрыгайчик</a>
                   </p>
                   <p class="catalog__description">Рост 30 см, вес 200 г</p>
                 </div>
                 <div class="catalog__block catalog__block--buy">
                   <p class="catalog__price">1 200 руб.</p>
-                  <a class="catalog__cart-link" href="#">
+                  <a class="catalog__cart-link" href="#" onclick="buyItem()">
                     <span class="visually-hidden">Добавить в корзину</span>
-                    <svg width="21" height="18"><use xlink:href="img/sprite.svg#icon-cart"></use></svg>
+                    <svg width="21" height="18"><use xlink:href="#icon-cart"></use></svg>
                   </a>
                 </div>
               </div>
             </li>
             <li class="catalog__item">
-              <a href="#">
+              <a href="bowl.html">
                 <picture>
                   <source media="(min-width: 1150px)" type="image/webp" srcset="img/photo-bowl-desktop@1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
                   <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
@@ -99,21 +101,21 @@
               <div class="catalog__wrapper">
                 <div class="catalog__block">
                   <p class="catalog__name">
-                    <a class="catalog__link" href="#">Корзинка для белья</a>
+                    <a class="catalog__link" href="bowl.html">Корзинка для белья</a>
                   </p>
                   <p class="catalog__description">Диаметр 15 см, высота 10 см</p>
                 </div>
                 <div class="catalog__block catalog__block--buy">
                   <p class="catalog__price">690 руб.</p>
-                  <a class="catalog__cart-link" href="#">
+                  <a class="catalog__cart-link" href="#" onclick="buyItem()">
                     <span class="visually-hidden">Добавить в корзину</span>
-                    <svg width="21" height="18"><use xlink:href="img/sprite.svg#icon-cart"></use></svg>
+                    <svg width="21" height="18"><use xlink:href="#icon-cart"></use></svg>
                   </a>
                 </div>
               </div>
             </li>
             <li class="catalog__item">
-              <a href="#">
+              <a href="toys.html">
                 <picture>
                   <source media="(min-width: 1150px)" type="image/webp" srcset="img/photo-toys-desktop@1x.webp 1x, img/photo-toys-desktop@2x.webp 2x">
                   <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
@@ -126,15 +128,15 @@
               <div class="catalog__wrapper">
                 <div class="catalog__block">
                   <p class="catalog__name">
-                    <a class="catalog__link" href="#">Большая корзинка для&nbsp;игрушек</a>
+                    <a class="catalog__link" href="toys.html">Большая корзинка для&nbsp;игрушек</a>
                   </p>
                   <p class="catalog__description">Диаметр 30 см, высота 30 см</p>
                 </div>
                 <div class="catalog__block catalog__block--buy">
                   <p class="catalog__price">1 500 руб.</p>
-                  <a class="catalog__cart-link" href="#">
+                  <a class="catalog__cart-link" href="#" onclick="buyItem()">
                     <span class="visually-hidden">Добавить в корзину</span>
-                    <svg width="21" height="18"><use xlink:href="img/sprite.svg#icon-cart"></use></svg>
+                    <svg width="21" height="18"><use xlink:href="#icon-cart"></use></svg>
                   </a>
                 </div>
               </div>
@@ -156,12 +158,12 @@
               </picture>
               <button class="production__video-button">
                 <span class="visually-hidden">Кнопка проигрывания видео</span>
-                <svg class="production__icon" width="101" height="77"><use xlink:href="img/sprite.svg#icon-play"></use></svg>
+                <svg class="production__icon" width="101" height="77"><use xlink:href="#icon-play"></use></svg>
               </button>
             </div>
             <div class="production__block">
               <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-              <a class="button button--ghost production__buy-button">Сделать заказ</a>
+              <a class="button button--ghost production__buy-button size-link" href="order.html">Сделать заказ</a>
             </div>
           </div>
         </section>
@@ -170,39 +172,60 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <svg class="page-footer__logo" width="102" height="34"><use xlink:href="img/sprite.svg#footer-logo"></use></svg>
+        <a class="page-footer__link" href="index.html"><svg class="page-footer__logo" width="102" height="34"><use xlink:href="#footer-logo"></use></svg></a>
         <ul class="social">
           <li class="social__item">
             <a class="social__link social__link-instagram" href="#">
               <span class="visually-hidden">Мы в Инстаграме</span>
-              <svg width="21" height="21"><use xlink:href="img/sprite.svg#icon-instagram"></use></svg>
+              <svg width="21" height="21"><use xlink:href="#icon-instagram"></use></svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link-facebook" href="#">
               <span class="visually-hidden">Мы в Фейсбуке</span>
-              <svg width="15" height="28"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
+              <svg width="15" height="28"><use xlink:href="#icon-facebook"></use></svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link-twitter" href="#">
               <span class="visually-hidden">Мы в Твиттере</span>
-              <svg width="23" height="20"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
+              <svg width="23" height="20"><use xlink:href="#icon-twitter"></use></svg>
             </a>
           </li>
         </ul>
         <div class="copyright page-footer__copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <p class="copyright__text">Разработано</p>
-            <svg class="copyright__icon" width="27" height="34"><use xlink:href="img/sprite.svg#academy-logo"></use></svg>
+            <svg class="copyright__icon" width="27" height="34"><use xlink:href="#academy-logo"></use></svg>
           </a>
         </div>
       </div>
     </footer>
 
+    <section class="modal modal--size">
+      <h2 class="modal__title">Добавить в&nbspкорзину</h2>
+      <p class="modal__text">Выберите размер:</p>
+      <form class="modal__form">
+        <div class="modal__wrapper">
+          <input class="visually-hidden modal__radio" id="s-size" type="radio" name="size" checked="">
+          <label class="modal__label" for="s-size">s</label>
+          <input class="visually-hidden modal__radio" id="m-size" type="radio" name="size">
+          <label class="modal__label" for="m-size">m</label>
+          <input class="visually-hidden modal__radio" id="l-size" type="radio" name="size">
+          <label class="modal__label" for="l-size">l</label>
+        </div>
+        <button class="modal__button" type="submit">Добавить</button>
+      </form>
+    </section>
+    <div class="overlay"></div>
+
+    <script src="js/picturefill.js"></script>
     <script>
       var navMain = document.querySelector('.main-nav');
       var navToggle = document.querySelector('.main-nav__toggle');
+
+      var popup = document.querySelector(".modal--size");
+      var overlay = document.querySelector(".overlay");
 
       navMain.classList.remove('main-nav--nojs');
 
@@ -215,7 +238,22 @@
           navMain.classList.remove('main-nav--opened');
         }
       });
+
+      function buyItem() {
+        event.preventDefault()
+        popup.classList.add("modal--show");
+        overlay.classList.add("overlay--show");
+      };
+
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+          if (popup.classList.contains("modal--show")) {
+            popup.classList.remove("modal--show");
+            overlay.classList.remove("overlay--show");
+          }
+        }
+      });
     </script>
-    <script src="js/picturefill.js"></script>
   </body>
 </html>

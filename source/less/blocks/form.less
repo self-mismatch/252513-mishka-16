@@ -1,9 +1,6 @@
 .form__block {
   position: relative;
 
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   margin: 0;
   margin-bottom: 28px;
   padding: 0;
@@ -69,6 +66,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  width: 100%;
 
   &--phone {
     margin-bottom: 30px;
@@ -97,12 +95,32 @@
   border: none;
   background-color: transparent;
 
+  &:disabled + .form__label {
+    opacity: 0.3;
+  }
+
+  &:disabled + .form__label:hover::before {
+    border-color: #444444;
+  }
+
+  &:disabled + .form__label:active::before {
+    opacity: 1;
+  }
+
   &--radio:checked + .form__label--type::after {
     display: block;
   }
 
+  &--radio:focus + .form__label--type::before {
+    border-color: #62d1ba;
+  }
+
   &--checkbox:checked + .form__label--color::after {
     display: block;
+  }
+
+  &--checkbox:focus + .form__label--color::before {
+    border-color: #62d1ba;
   }
 
   &--text {
@@ -116,6 +134,10 @@
     &:focus,
     &:active {
       border-color: #62d1ba;
+
+      & + label + .form__icon {
+        color: #62d1ba;
+      }
     }
   }
 
@@ -250,6 +272,10 @@
 
   color: #cccccc;
 
+  &:hover {
+    color: #62d1ba;
+  }
+
   &--phone {
     top: 11px;
     right: 8px;
@@ -286,7 +312,6 @@
 
 @media (min-width: @tablet-width) {
   .form__block {
-    flex-direction: row;
     margin: 0;
     padding: 50px;
 
@@ -297,6 +322,14 @@
     &:nth-child(2n) {
       background-color: #f1f1f1;
     }
+  }
+
+  .form__block-wrapper {
+    .wrapper();
+    display: flex;
+    flex-wrap: wrap;
+
+    flex-direction: row;
   }
 
   .form__block-title {
@@ -419,6 +452,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
+    width: 768px;
+    margin: 0 auto;
     padding: 0 50px;
     padding-top: 3px;
   }
@@ -445,10 +480,6 @@
 
   .form__input-block {
     max-width: 875px;
-
-    &--phone {
-      margin-right: 50px;
-    }
   }
 
   .form__text-block {
@@ -457,7 +488,7 @@
 
   .form__input {
     &--wishes {
-      min-width: 700px;
+      max-width: 700px;
     }
   }
 
@@ -491,7 +522,7 @@
 
   .form__send-block {
     width: 700px;
-    margin: 0 225px;
+    margin: 0 auto;
     padding: 0;
   }
 }
